@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Longevity Turnaround Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0E1F48;--deep:#081634;--blue:#1a73e8;--teal:#17b6b0;--gold:#e6b84f;--bone:#F5F2EA}
+html,body{background:#05101f;font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--bone)}
+.slide{width:100vw;height:100vh;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;
+  justify-content:center;overflow:hidden;padding:5vh 6vw}
+#deck{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
+.grad{background:linear-gradient(100deg,#5ea0ff,#17b6b0 55%,#e6b84f);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* OPENER */
+.s-opener{background:radial-gradient(120% 120% at 15% 0%,#12336b,#081634 60%,#05101f);text-align:left}
+.okick{font-size:1.5vw;letter-spacing:.22em;text-transform:uppercase;color:#7fb0ff;font-weight:700}
+.otitle{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:12vw;line-height:.92;margin:2vh 0}
+.osub{font-size:2.4vw;max-width:70%;color:#c9d4e6;line-height:1.4}
+.statrow{display:flex;gap:2vw;margin-top:5vh}
+.stat{flex:1;border-radius:18px;padding:3vh 2vw;border:1px solid rgba(255,255,255,.12)}
+.s-blue{background:linear-gradient(160deg,rgba(26,115,232,.28),rgba(26,115,232,.06))}
+.s-teal{background:linear-gradient(160deg,rgba(23,182,176,.28),rgba(23,182,176,.06))}
+.s-gold{background:linear-gradient(160deg,rgba(230,184,79,.28),rgba(230,184,79,.06))}
+.sn{font-family:'Cormorant Garamond',serif;font-size:6vw;font-weight:700;line-height:1}
+.s-blue .sn{color:#7fb0ff}.s-teal .sn{color:#5fe0da}.s-gold .sn{color:#ffd274}
+.sl{font-size:1.35vw;color:#c9d4e6;margin-top:1vh;line-height:1.35}
+/* SLIDE 2 */
+.s-two{background:radial-gradient(120% 120% at 85% 10%,#0f2a55,#06122400 55%),#081634}
+.s2h{font-family:'Cormorant Garamond',serif;font-size:5.5vw;font-weight:700;margin-bottom:3vh;line-height:1}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:3vw;flex:1;min-height:0}
+.colhead{font-size:2vw;font-weight:700;letter-spacing:.04em;padding-bottom:1vh;margin-bottom:1.6vh;border-bottom:2px solid}
+.ch-mk{color:#7fb0ff;border-color:#1a73e8}.ch-sl{color:#5fe0da;border-color:#17b6b0}
+.pcards{display:flex;flex-direction:column;gap:1.4vh}
+.pcard{background:rgba(255,255,255,.04);border-radius:12px;padding:1.7vh 1.6vw;border-left:5px solid;position:relative}
+.pc-mk{border-color:#1a73e8}.pc-sl{border-color:#17b6b0}
+.pcnum{position:absolute;top:1.4vh;right:1.2vw;font-family:'Cormorant Garamond',serif;font-size:2.4vw;font-weight:700;opacity:.32}
+.pc-mk .pcnum{color:#7fb0ff}.pc-sl .pcnum{color:#5fe0da}
+.pct{font-size:1.7vw;font-weight:700;line-height:1.12;max-width:82%}
+.pcs{font-size:1.15vw;color:#b6c2d6;margin-top:.5vh}
+/* DIVIDERS */
+.s-div{align-items:flex-start;justify-content:center}
+.dvbg-mk{background:radial-gradient(120% 120% at 20% 30%,#12488f,#081634 60%)}
+.dvbg-sl{background:radial-gradient(120% 120% at 20% 30%,#0c5b57,#062b29 60%)}
+.dvbg-ap{background:radial-gradient(120% 120% at 20% 30%,#3a3550,#161327 60%)}
+.dvkick{font-size:1.6vw;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:#9fb8dd}
+.dvh{font-family:'Cormorant Garamond',serif;font-size:11vw;font-weight:700;line-height:.9;margin:1.5vh 0}
+.dvs{font-size:2.1vw;max-width:66%;color:#d3ddec;line-height:1.4}
+/* DEEP DIVE intro */
+.s-dd{align-items:flex-start}
+.dd{max-width:80%}
+.ddkick{font-size:1.5vw;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:1.5vh}
+.ddk-blue{color:#7fb0ff}.ddk-teal{color:#5fe0da}.ddk-gold{color:#ffd274}
+.dd-blue{background:radial-gradient(120% 120% at 15% 10%,#123a72,#081634 55%)}
+.dd-teal{background:radial-gradient(120% 120% at 15% 10%,#0c5450,#062b29 55%)}
+.dd-gold{background:radial-gradient(120% 120% at 15% 10%,#5a4a1e,#1e1808 55%)}
+.ddh{font-family:'Cormorant Garamond',serif;font-size:6.5vw;font-weight:700;line-height:.98}
+.dds{font-size:2vw;color:#d3ddec;line-height:1.45;margin-top:2vh}
+.dds b{color:#fff}
+.linkrow{margin-top:3vh}.linkrow a{color:#7fb0ff;font-size:1.5vw;text-decoration:none;border-bottom:1px solid rgba(127,176,255,.4);padding-bottom:2px;word-break:break-all}
+/* IMAGE SLIDES full bleed */
+.imgslide{padding:0;background:#05101f;align-items:center;justify-content:center}
+.imgwrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:2.5vh 2vw}
+.imgwrap img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.srclabel{position:absolute;top:2vh;left:2.5vw;z-index:5;font-size:1.1vw;letter-spacing:.16em;text-transform:uppercase;
+  color:#9fb8dd;font-weight:600;background:rgba(5,16,31,.7);padding:.7vh 1.2vw;border-radius:20px;backdrop-filter:blur(4px)}
+/* VIDEO */
+.s-video{padding:0;background:#000;align-items:center;justify-content:center}
+.vidlabel{position:absolute;top:2vh;left:2.5vw;z-index:5;font-size:1.1vw;letter-spacing:.16em;text-transform:uppercase;color:#ffd274;font-weight:700;background:rgba(0,0,0,.6);padding:.7vh 1.2vw;border-radius:20px}
+.soundbtn{position:absolute;bottom:4vh;left:50%;transform:translateX(-50%);z-index:6;background:#e6b84f;color:#0E1F48;font-weight:700;font-size:1.5vw;padding:1.4vh 2.4vw;border:none;border-radius:40px;cursor:pointer;box-shadow:0 10px 30px rgba(230,184,79,.4)}
+/* EMAIL ROW */
+.s-emailrow{background:radial-gradient(120% 120% at 50% 0%,#123a72,#081634 60%);align-items:center;justify-content:center}
+.emrow{display:flex;gap:1.6vw;align-items:flex-start;justify-content:center;width:100%;height:82vh}
+.emcard{display:flex;flex-direction:column;height:100%}
+.emcap{font-size:1.05vw;letter-spacing:.12em;text-transform:uppercase;color:#9fb8dd;font-weight:700;margin-bottom:1vh;text-align:center}
+.emcard img{max-height:100%;width:auto;border-radius:10px;box-shadow:0 24px 60px -26px rgba(0,0,0,.8)}
+/* FORM */
+.s-form{background:radial-gradient(120% 120% at 80% 20%,#0c5450,#062b29 60%);flex-direction:row;gap:4vw;align-items:center;justify-content:center;padding:4vh 6vw}
+.formwrap img{max-height:86vh;width:auto;border-radius:14px;box-shadow:0 30px 70px -26px rgba(0,0,0,.8)}
+.formnotes{display:flex;flex-direction:column;gap:2.6vh;max-width:26vw}
+.fn{font-size:1.9vw;font-weight:600;line-height:1.25;display:flex;align-items:center;gap:1vw}
+.fnb{width:1.3vw;height:1.3vw;border-radius:50%;background:#1a73e8;flex:0 0 auto}
+.fnb.b2{background:#a033ff}.fnb.b3{background:#25D366}.fnb.b4{background:#e6b84f}
+/* LINKS */
+.s-links{background:radial-gradient(120% 120% at 50% 0%,#12336b,#081634 60%)}
+.linkgrid{display:grid;grid-template-columns:1fr 1fr;gap:2vw;margin-top:2vh}
+.lk{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:3vh 2vw;text-decoration:none;display:block}
+.lkt{font-size:2vw;font-weight:700;color:#fff}
+.lku{font-size:1.2vw;color:#7fb0ff;margin-top:.8vh}
+</style></head>
+<body><div id="deck">
+<section class="slide s-opener">
+  <div class="opener">
+    <div class="okick">Longevity Life Academy · by eTeacher Group</div>
+    <h1 class="otitle">The <span class="grad">Turnaround</span><br>Plan</h1>
+    <p class="osub">What's needed to turn things around — Marketing &amp; Sales, deep-dived with real assets already live.</p>
+    <div class="statrow">
+      <div class="stat s-blue"><div class="sn">3,500</div><div class="sl">previous leads<br>re-activated by email</div></div>
+      <div class="stat s-teal"><div class="sn">2</div><div class="sl">engines<br>marketing + sales</div></div>
+      <div class="stat s-gold"><div class="sn">Thu</div><div class="sl">new campaigns<br>live this week</div></div>
+    </div>
+  </div>
+</section>
+<section class="slide s-two">
+  <h2 class="s2h">What's Needed to <span class="grad">Turn Things Around</span></h2>
+  <div class="twocol">
+    <div class="colwrap">
+      <div class="colhead ch-mk">Marketing</div>
+      <div class="pcards"><div class="pcard pc-mk"><div class="pcnum">01</div><div class="pct">Storytelling FA-format videos</div><div class="pcs">Real face, not AI — French-Atelier films</div></div><div class="pcard pc-mk"><div class="pcnum">02</div><div class="pct">Higher contacted on leads</div><div class="pcs">Call-back hours, Messenger &amp; WhatsApp on every form</div></div><div class="pcard pc-mk"><div class="pcnum">03</div><div class="pct">Withdrawing intent from 3,500 previous leads</div><div class="pcs">Email promo blast — French-atelier style</div></div><div class="pcard pc-mk"><div class="pcnum">04</div><div class="pct">Credibility &amp; prestige with PR</div><div class="pcs">PR as part of the lead funnel — going live tonight</div></div></div>
+    </div>
+    <div class="colwrap">
+      <div class="colhead ch-sl">Sales</div>
+      <div class="pcards"><div class="pcard pc-sl"><div class="pcnum">A</div><div class="pct">Updating scripts</div><div class="pcs">Refreshed 3-circle sales script</div></div><div class="pcard pc-sl"><div class="pcnum">B</div><div class="pct">Night-shift calling hours</div><div class="pcs">Extend reach across time zones</div></div><div class="pcard pc-sl"><div class="pcnum">C</div><div class="pct">Strong trainer / rep on new campaigns</div><div class="pcs">Back on this week, as of Thursday</div></div><div class="pcard pc-sl"><div class="pcnum">D</div><div class="pct">Team plan</div><div class="pcs">How many shifts / reps we want</div></div><div class="pcard pc-sl"><div class="pcnum">E</div><div class="pct">Additional ideas</div><div class="pcs">Open floor for new levers</div></div></div>
+    </div>
+  </div>
+</section>
+<section class="slide s-div dvbg-mk">
+  <div class="divider dv-mk">
+    <div class="dvkick">Engine 01</div>
+    <h2 class="dvh">Marketing</h2>
+    <p class="dvs">Four levers — storytelling video, higher contact, 3,500-lead re-activation, and PR credibility.</p>
+  </div>
+</section>
+<section class="slide s-dd dd-blue">
+  <div class="dd">
+    <div class="ddkick ddk-blue">Marketing · Lever 01</div>
+    <h2 class="ddh">Storytelling FA-Format Videos</h2>
+    <p class="dds">Real face — <b>not AI</b>. Julie's chosen scripts, filmed this Wednesday, French-Atelier MasterClass style. Full film-series deck follows, exactly as designed.</p>
+    <div class="linkrow"><a href="https://gitteromri-ux.github.io/lla-masterclass-film-series/">gitteromri-ux.github.io/lla-masterclass-film-series</a></div>
+  </div>
+</section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_00.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_01.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_02.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_03.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_04.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_05.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_06.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_07.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_08.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_09.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_10.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_11.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_12.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_13.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_14.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_15.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_16.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_17.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Film Series — as designed</div>
+      <div class="imgwrap"><img src="assets/film/film_18.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide s-dd dd-gold">
+  <div class="dd">
+    <div class="ddkick ddk-gold">Marketing · Lever 01 · Courtney</div>
+    <h2 class="ddh">Courtney Video — Scripts 9 &amp; 10</h2>
+    <p class="dds">The deck's own <b>#9 "The Guide"</b> and <b>#10 "The Two Lives"</b> full verbatim scripts, unchanged — then the final edited cut on the new set.</p>
+    <div class="linkrow"><a href="https://gitteromri-ux.github.io/courtney-lla-masterclass/">Courtney × LLA — Master Deck</a></div>
+  </div>
+</section>
+<section class="slide imgslide">
+      <div class="srclabel">Courtney Master Deck — Script #9</div>
+      <div class="imgwrap"><img src="assets/courtney_09_guide_full_script.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Courtney Master Deck — Script #10</div>
+      <div class="imgwrap"><img src="assets/courtney_010_two_lives_full_script.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide s-video">
+  <div class="vidlabel">Courtney · Final Edited Cut · New Set · 0717</div>
+  <video src="Courtney_CINEMA_FINAL_0717.mp4" autoplay controls playsinline
+         style="width:100%;height:100%;object-fit:contain;background:#000"></video>
+  <button class="soundbtn" onclick="var v=this.previousElementSibling;v.muted=false;v.play();this.style.display='none'">▶ Play with sound</button>
+</section>
+<section class="slide s-dd dd-teal">
+  <div class="dd">
+    <div class="ddkick ddk-teal">Marketing · Lever 04</div>
+    <h2 class="ddh">PR — Already Live</h2>
+    <p class="dds">Credibility &amp; prestige as part of the lead funnel. Real outlets, real mockups — <b>going live tonight</b>. Full approved deck follows, every slide in its original design.</p>
+    <div class="linkrow"><a href="https://gitteromri-ux.github.io/lla-julie-review/#1">gitteromri-ux.github.io/lla-julie-review</a></div>
+  </div>
+</section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_00.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_01.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_02.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_03.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_04.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_05.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_06.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_07.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_08.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_09.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_10.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_11.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_12.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">PR Deck — approved, as designed</div>
+      <div class="imgwrap"><img src="assets/pr/pr_13.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide s-dd dd-blue">
+  <div class="dd">
+    <div class="ddkick ddk-blue">Marketing · Lever 03</div>
+    <h2 class="ddh">Withdrawing Intent — 3,500 Previous Leads</h2>
+    <p class="dds">Email promo blast. French-atelier CEO email format migrated to <b>our real Longevity course</b> — same structure, our exact school. Three mockups follow.</p>
+  </div>
+</section>
+<section class="slide s-emailrow">
+  <div class="srclabel">Longevity Promo Emails — migrated from eTeacher / Rosen format</div>
+  <div class="emrow">
+    <div class="emcard"><div class="emcap">1 · Final list / voucher</div><img src="assets/email/e1.png"></div>
+    <div class="emcard"><div class="emcap">2 · Launch-week gift</div><img src="assets/email/e2.png"></div>
+    <div class="emcard"><div class="emcap">3 · Launch scholarship</div><img src="assets/email/e3.png"></div>
+  </div>
+</section>
+<section class="slide s-dd dd-teal">
+  <div class="dd">
+    <div class="ddkick ddk-teal">Marketing · Lever 02</div>
+    <h2 class="ddh">Higher Contacted on Leads</h2>
+    <p class="dds">On <b>longevitylifeacademy.com</b> (staging), next to every form on every page: preferred call-back hour with 1-hour slots across all 24 hours, plus <b>Messenger</b> and <b>WhatsApp</b> — premium design.</p>
+  </div>
+</section>
+<section class="slide s-form">
+  <div class="srclabel">Staging · longevitylifeacademy.com — form component</div>
+  <div class="formwrap"><img src="assets/email/form.png"></div>
+  <div class="formnotes">
+    <div class="fn"><span class="fnb"></span>24-hour call-back dropdown, 1-hour slots</div>
+    <div class="fn"><span class="fnb b2"></span>Talk to us on Messenger</div>
+    <div class="fn"><span class="fnb b3"></span>Talk to us on WhatsApp</div>
+    <div class="fn"><span class="fnb b4"></span>Added next to <b>every</b> form, all pages</div>
+  </div>
+</section>
+<section class="slide s-div dvbg-sl">
+  <div class="divider dv-sl">
+    <div class="dvkick">Engine 02</div>
+    <h2 class="dvh">Sales</h2>
+    <p class="dvs">Updated scripts, night-shift hours, strong rep on new campaigns Thursday, team plan, and additional ideas.</p>
+  </div>
+</section>
+<section class="slide s-links">
+  <h2 class="s2h">Approved Assets &amp; <span class="grad">Live Links</span></h2>
+  <div class="linkgrid">
+    <a class="lk" href="https://gitteromri-ux.github.io/lla-masterclass-film-series/"><div class="lkt">Film Series Scripts</div><div class="lku">lla-masterclass-film-series</div></a>
+    <a class="lk" href="https://gitteromri-ux.github.io/courtney-lla-masterclass/"><div class="lkt">Courtney Master Deck</div><div class="lku">courtney-lla-masterclass</div></a>
+    <a class="lk" href="https://gitteromri-ux.github.io/lla-julie-review/#1"><div class="lkt">PR — Approved (live tonight)</div><div class="lku">lla-julie-review</div></a>
+    <a class="lk" href="https://gitteromri-ux.github.io/lla-julie-communications-plan/"><div class="lkt">Julie Full Communications Plan</div><div class="lku">lla-julie-communications-plan</div></a>
+  </div>
+</section>
+<section class="slide s-div dvbg-ap">
+  <div class="divider dv-ap">
+    <div class="dvkick">Appendix</div>
+    <h2 class="dvh">Current Sales Scripts</h2>
+    <p class="dvs">The full 3-circle Longevity sales script — large text, for reference.</p>
+  </div>
+</section>
+<section class="slide imgslide">
+      <div class="srclabel">Current Sales Script</div>
+      <div class="imgwrap"><img src="assets/script/sc1.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Current Sales Script</div>
+      <div class="imgwrap"><img src="assets/script/sc2.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Current Sales Script</div>
+      <div class="imgwrap"><img src="assets/script/sc3.png" style="object-fit:contain"></div>
+    </section>
+<section class="slide imgslide">
+      <div class="srclabel">Current Sales Script</div>
+      <div class="imgwrap"><img src="assets/script/sc4.png" style="object-fit:contain"></div>
+    </section>
+</div></body></html>
