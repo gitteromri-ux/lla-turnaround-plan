@@ -80,6 +80,14 @@ html,body{background:#05101f;font-family:'Hanken Grotesk',system-ui,sans-serif;c
 .fn{font-size:1.9vw;font-weight:600;line-height:1.25;display:flex;align-items:center;gap:1vw}
 .fnb{width:1.3vw;height:1.3vw;border-radius:50%;background:#1a73e8;flex:0 0 auto}
 .fnb.b2{background:#a033ff}.fnb.b3{background:#25D366}.fnb.b4{background:#e6b84f}
+/* FORM2 real homepage */
+.s-form2{background:radial-gradient(120% 120% at 80% 20%,#0c5450,#062b29 60%);flex-direction:row;gap:3.5vw;align-items:center;justify-content:center;padding:5vh 5vw}
+.browserframe{border-radius:14px;overflow:hidden;box-shadow:0 34px 80px -26px rgba(0,0,0,.85);max-width:62vw;background:#0a1a30}
+.bfbar{background:#0f2038;padding:1vh 1.2vw;display:flex;align-items:center;gap:.5vw}
+.bfdot{width:.8vw;height:.8vw;border-radius:50%;background:#3a5170}
+.bfurl{margin-left:1vw;background:#0a1526;color:#8ba3c7;font-size:1vw;padding:.5vh 1vw;border-radius:6px;flex:1}
+.browserframe img{display:block;width:100%;max-height:78vh;object-fit:contain;background:#0a1a30}
+.formnotes2{display:flex;flex-direction:column;gap:2.8vh;max-width:24vw}
 /* LINKS */
 .s-links{background:radial-gradient(120% 120% at 50% 0%,#12336b,#081634 60%)}
 .linkgrid{display:grid;grid-template-columns:1fr 1fr;gap:2vw;margin-top:2vh}
@@ -309,17 +317,21 @@ html,body{background:#05101f;font-family:'Hanken Grotesk',system-ui,sans-serif;c
   <div class="dd">
     <div class="ddkick ddk-teal">Marketing · Lever 02</div>
     <h2 class="ddh">Higher Contacted on Leads</h2>
-    <p class="dds">On <b>longevitylifeacademy.com</b> (staging), next to every form on every page: preferred call-back hour with 1-hour slots across all 24 hours, plus <b>Messenger</b> and <b>WhatsApp</b> — premium design.</p>
+    <p class="dds">Live on the staging site — next to every form on every page: <b>preferred call-back hour</b>, plus <b>Messenger</b> and <b>WhatsApp</b>, in premium design.</p>
+    <div class="linkrow"><a href="https://gitteromri-ux.github.io/lla-homepage-demo/">gitteromri-ux.github.io/lla-homepage-demo</a></div>
   </div>
 </section>
-<section class="slide s-form">
-  <div class="srclabel">Staging · longevitylifeacademy.com — form component</div>
-  <div class="formwrap"><img src="assets/email/form.png"></div>
-  <div class="formnotes">
-    <div class="fn"><span class="fnb"></span>24-hour call-back dropdown, 1-hour slots</div>
-    <div class="fn"><span class="fnb b2"></span>Talk to us on Messenger</div>
+<section class="slide s-form2">
+  <div class="srclabel">Staging · longevitylifeacademy.com — live form section</div>
+  <div class="browserframe">
+    <div class="bfbar"><span class="bfdot"></span><span class="bfdot"></span><span class="bfdot"></span><span class="bfurl">longevitylifeacademy.com</span></div>
+    <img src="assets/email/homepage_form.png">
+  </div>
+  <div class="formnotes2">
+    <div class="fn"><span class="fnb b4"></span>Preferred call-back hour — 1-hour slots, all 24 hours</div>
     <div class="fn"><span class="fnb b3"></span>Talk to us on WhatsApp</div>
-    <div class="fn"><span class="fnb b4"></span>Added next to <b>every</b> form, all pages</div>
+    <div class="fn"><span class="fnb b2"></span>Talk to us on Messenger</div>
+    <div class="fn"><span class="fnb"></span>Next to <b>every</b> form, on <b>every</b> page</div>
   </div>
 </section>
 <section class="slide s-div dvbg-sl">
